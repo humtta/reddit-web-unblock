@@ -2,6 +2,9 @@
 
 version: "3"
 
+dotenv:
+  - .env
+
 tasks:
   build: web-ext build -s src/ -a out/ -o
   lint: web-ext lint -s src/
