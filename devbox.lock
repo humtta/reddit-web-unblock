@@ -1,0 +1,57 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2026-06-29T11:10:55Z",
+      "resolved": "github:NixOS/nixpkgs/9c4c05a947a91dc14625265fab505fb695e93218?lastModified=1782731455"
+    },
+    "web-ext@8.10.0": {
+      "last_modified": "2026-06-27T07:37:20Z",
+      "resolved": "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d#web-ext",
+      "source": "devbox-search",
+      "version": "8.10.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gwra9hvnmbzxm03a3xh1jcbq9k4ymrin-web-ext-8.10.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gwra9hvnmbzxm03a3xh1jcbq9k4ymrin-web-ext-8.10.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fi0nm87zfl2ngahgyvhjwm6swp1xn1d3-web-ext-8.10.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/fi0nm87zfl2ngahgyvhjwm6swp1xn1d3-web-ext-8.10.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/m4fvz7y8m0i8i1k2bbyrchi64l5h9i38-web-ext-8.10.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/m4fvz7y8m0i8i1k2bbyrchi64l5h9i38-web-ext-8.10.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/b6fckkpd8qfa8cr1b53jz2q0ww6dyby8-web-ext-8.10.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/b6fckkpd8qfa8cr1b53jz2q0ww6dyby8-web-ext-8.10.0"
+        }
+      }
+    }
+  }
+}
