@@ -3,5 +3,11 @@
 
   "packages": {
     "web-ext": "8.10.0"
+  },
+
+  "shell": {
+    "scripts": {
+      "build": "web-ext build -s src/ -a out/ -o"
+    }
   }
 }
