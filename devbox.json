@@ -3,7 +3,8 @@
 
   "packages": {
     "web-ext": "8.10.0",
-    "android-tools": "35.0.2"
+    "android-tools": "35.0.2",
+    "go-task": "3.48.0"
   },
 
   "shell": {
