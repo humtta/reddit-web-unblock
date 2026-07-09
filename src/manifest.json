@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Reddit App-Wall Bypass",
+  "name": "Reddit Web Unblock",
   "description": "Bypasses Reddit app-wall.",
   "version": "0.0.0",
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "@reddit-app-wall-bypass.humtta",
+      "id": "@reddit-web-unblock.humtta",
       "data_collection_permissions": {
         "required": ["none"]
       }

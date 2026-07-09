@@ -1,4 +1,4 @@
-# Reddit App-Wall Bypass
+# Reddit Web Unblock
 
 A Firefox extension that bypasses Reddit app-wall.
 
