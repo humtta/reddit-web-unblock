@@ -17,4 +17,10 @@
   }
 
   removePopupFromNode(document.documentElement);
+
+  new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      mutation.addedNodes.forEach(removePopupFromNode);
+    }
+  }).observe(document.documentElement, { childList: true, subtree: true });
 })();
