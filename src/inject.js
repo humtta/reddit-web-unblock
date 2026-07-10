@@ -15,4 +15,6 @@
 
     node.querySelectorAll(popupSelector).forEach((el) => el.remove());
   }
+
+  removePopupFromNode(document.documentElement);
 })();
