@@ -7,5 +7,5 @@ dotenv:
 
 tasks:
   build: web-ext build -s src/ -a out/ -o
-  lint: web-ext lint -s src/
+  validate: web-ext lint -s src/
   run: web-ext run -s src/ -t firefox-android --adb-device $ADB_DEVICE --firefox-apk $FIREFOX_APK
