@@ -18,5 +18,13 @@
         "required": ["none"]
       }
     }
-  }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["inject.js"],
+      "run_at": "document_start"
+    }
+  ]
 }
