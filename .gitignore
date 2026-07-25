@@ -1,2 +1,5 @@
+# Build directory
 out/
+
+# Environment variables
 .env
