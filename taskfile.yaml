@@ -6,9 +6,26 @@ dotenv:
   - .env
 
 tasks:
-  build: web-ext build -s src/ -a out/ -o
-  validate: web-ext lint -s src/
-  run: web-ext run -s src/ -t firefox-android --adb-device $ADB_DEVICE --firefox-apk $FIREFOX_APK
-  format: biome format --write .
-  lint: biome check .
-  check: task format && task lint
+  build:
+    desc: Builds the extension
+    cmd: web-ext build -s src/ -a out/ -o
+
+  validate:
+    desc: Validates the extension
+    cmd: web-ext lint -s src/
+
+  run:
+    desc: Runs the extension
+    cmd: web-ext run -s src/ -t firefox-android --adb-device $ADB_DEVICE --firefox-apk $FIREFOX_APK
+
+  format:
+    desc: Formats the code
+    cmd: biome format --write .
+
+  lint:
+    desc: Lints the code
+    cmd: biome check .
+
+  check:
+    desc: Formats and lints the code
+    cmd: task format && task lint
