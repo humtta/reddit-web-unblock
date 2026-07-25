@@ -28,4 +28,4 @@ tasks:
 
   check:
     desc: Formats and lints the code
-    cmd: task format && task lint
+    cmd: task format lint
