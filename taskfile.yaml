@@ -14,6 +14,10 @@ tasks:
     desc: Validates the extension
     cmd: web-ext lint -s src/
 
+  generate:
+    desc: Generates the userscript
+    cmd: bash scripts/gen-script.sh
+
   run:
     desc: Runs the extension
     cmd: web-ext run -s src/ -t firefox-android --adb-device $ADB_DEVICE --firefox-apk $FIREFOX_APK
