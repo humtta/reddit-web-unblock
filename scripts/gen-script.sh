@@ -21,3 +21,6 @@ version="$(jq -r '.version' "${MANIFEST_FILE}")"
 match="$(jq -r '.content_scripts[0].matches[0]' "${MANIFEST_FILE}")"
 run_at="$(jq -r '.content_scripts[0].run_at' "${MANIFEST_FILE}")"
 run_at="${run_at//_/-}" # Replace _ with -
+
+# Get JS file content
+js="$(<"${JS_FILE}")"
