@@ -9,10 +9,10 @@ MANIFEST_FILE="${ROOT_DIR}/src/manifest.json"
 JS_FILE="${ROOT_DIR}/src/inject.js"
 
 # Paths relative to the project root directory
-ICON_FILE_REL="src/assets/icon.svg"
-SCRIPT_FILE_REL="script.user.js"
+ICON_FILE_REL='src/assets/icon.svg'
+SCRIPT_FILE_REL='script.user.js'
 
-NAMESPACE="https://github.com/humtta/reddit-web-unblock"
+NAMESPACE='https://github.com/humtta/reddit-web-unblock'
 
 # Get manifest metadata
 name="$(jq -r '.name' "${MANIFEST_FILE}")"
