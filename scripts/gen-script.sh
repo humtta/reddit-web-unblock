@@ -24,3 +24,27 @@ run_at="${run_at//_/-}" # Replace _ with -
 
 # Get JS file content
 js="$(<"${JS_FILE}")"
+
+# Generate userscript
+cat <<-EOF >"${ROOT_DIR}/${SCRIPT_FILE_REL}"
+	// ==UserScript==
+	// @name         ${name}
+	// @description  ${description}
+	// @version      ${version}
+	// @author       Hugo Marotta <humtta@proton.me>
+	//
+	// @copyright    © 2026 Hugo Marotta (https://github.com/humtta)
+	// @license      MIT
+	//
+	// @match        ${match}
+	// @grant        none
+	// @run-at       ${run_at}
+	//
+	// @namespace    ${NAMESPACE}
+	// @icon         ${NAMESPACE}/raw/main/${ICON_FILE_REL}
+	// @updateURL    ${NAMESPACE}/raw/main/${SCRIPT_FILE_REL}
+	// @downloadURL  ${NAMESPACE}/raw/main/${SCRIPT_FILE_REL}
+	// ==/UserScript==
+
+	${js}
+EOF
