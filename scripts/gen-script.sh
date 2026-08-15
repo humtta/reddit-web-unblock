@@ -13,3 +13,11 @@ ICON_FILE_REL="src/assets/icon.svg"
 SCRIPT_FILE_REL="script.user.js"
 
 NAMESPACE="https://github.com/humtta/reddit-web-unblock"
+
+# Get manifest metadata
+name="$(jq -r '.name' "${MANIFEST_FILE}")"
+description="$(jq -r '.description' "${MANIFEST_FILE}")"
+version="$(jq -r '.version' "${MANIFEST_FILE}")"
+match="$(jq -r '.content_scripts[0].matches[0]' "${MANIFEST_FILE}")"
+run_at="$(jq -r '.content_scripts[0].run_at' "${MANIFEST_FILE}")"
+run_at="${run_at//_/-}" # Replace _ with -
