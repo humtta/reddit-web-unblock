@@ -26,6 +26,15 @@ On your Android device:
   debugging for the connection.
 - In the Firefox settings, enable "Remote debugging via USB".
 
+Back to your computer, create an environment file from the template:
+
+```sh
+cp .env.example .env
+```
+
+Set the environment variables in the `.env` file, following the instructions in
+the comments.
+
 ## License
 
 This project is licensed under the [MIT License].
