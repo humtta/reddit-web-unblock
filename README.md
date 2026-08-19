@@ -11,6 +11,12 @@ Add the extension to Firefox for Android from [Firefox Add-ons].
 This project uses [Devbox] to manage the development environment. See how to
 install it [here].
 
+With Devbox installed, start a new shell:
+
+```sh
+devbox shell
+```
+
 ## License
 
 This project is licensed under the [MIT License].
