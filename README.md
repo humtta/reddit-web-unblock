@@ -17,6 +17,15 @@ With Devbox installed, start a new shell:
 devbox shell
 ```
 
+On your Android device:
+
+- Install [Firefox].
+- Enable USB debugging. The steps may vary depending on the device, but
+  [this tutorial] is a good starting point.
+- Connect it to your computer with a USB cable. When prompted, allow USB
+  debugging for the connection.
+- In the Firefox settings, enable "Remote debugging via USB".
+
 ## License
 
 This project is licensed under the [MIT License].
@@ -25,4 +34,6 @@ This project is licensed under the [MIT License].
 [firefox add-ons]: https://addons.mozilla.org/en-US/firefox
 [devbox]: https://www.jetify.com/docs/devbox
 [here]: https://www.jetify.com/docs/devbox/installing-devbox
+[firefox]: https://play.google.com/store/apps/details?id=org.mozilla.firefox
+[this tutorial]: https://developer.android.com/studio/debug/dev-options
 [mit license]: LICENSE.md
