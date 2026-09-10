@@ -3,30 +3,30 @@
 set -eo pipefail
 
 # Project root directory
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-MANIFEST_FILE="${ROOT_DIR}/src/manifest.json"
-JS_FILE="${ROOT_DIR}/src/inject.js"
+manifest_file="${root_dir}/src/manifest.json"
+js_file="${root_dir}/src/inject.js"
 
 # Paths relative to the project root directory
-ICON_FILE_REL='src/assets/icon.svg'
-SCRIPT_FILE_REL='script.user.js'
+icon_file_rel='src/assets/icon.svg'
+script_file_rel='script.user.js'
 
-NAMESPACE='https://github.com/humtta/reddit-web-unblock'
+namespace='https://github.com/humtta/reddit-web-unblock'
 
 # Get manifest metadata
-name="$(jq -r '.name' "${MANIFEST_FILE}")"
-description="$(jq -r '.description' "${MANIFEST_FILE}")"
-version="$(jq -r '.version' "${MANIFEST_FILE}")"
-match="$(jq -r '.content_scripts[0].matches[0]' "${MANIFEST_FILE}")"
-run_at="$(jq -r '.content_scripts[0].run_at' "${MANIFEST_FILE}")"
+name="$(jq -r '.name' "${manifest_file}")"
+description="$(jq -r '.description' "${manifest_file}")"
+version="$(jq -r '.version' "${manifest_file}")"
+match="$(jq -r '.content_scripts[0].matches[0]' "${manifest_file}")"
+run_at="$(jq -r '.content_scripts[0].run_at' "${manifest_file}")"
 run_at="${run_at//_/-}" # Replace _ with -
 
 # Get JS file content
-js="$(<"${JS_FILE}")"
+js="$(<"${js_file}")"
 
 # Generate userscript
-cat <<-EOF >"${ROOT_DIR}/${SCRIPT_FILE_REL}"
+cat <<-EOF >"${root_dir}/${script_file_rel}"
 	// ==UserScript==
 	// @name         ${name}
 	// @description  ${description}
@@ -40,10 +40,10 @@ cat <<-EOF >"${ROOT_DIR}/${SCRIPT_FILE_REL}"
 	// @grant        none
 	// @run-at       ${run_at}
 	//
-	// @namespace    ${NAMESPACE}
-	// @icon         ${NAMESPACE}/raw/main/${ICON_FILE_REL}
-	// @updateURL    ${NAMESPACE}/raw/main/${SCRIPT_FILE_REL}
-	// @downloadURL  ${NAMESPACE}/raw/main/${SCRIPT_FILE_REL}
+	// @namespace    ${namespace}
+	// @icon         ${namespace}/raw/main/${icon_file_rel}
+	// @updateURL    ${namespace}/raw/main/${script_file_rel}
+	// @downloadURL  ${namespace}/raw/main/${script_file_rel}
 	// ==/UserScript==
 
 	${js}
