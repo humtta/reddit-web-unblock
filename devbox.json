@@ -5,13 +5,15 @@
 
   "shell": {
     "scripts": {
-      "build": "web-ext build -s src/ -a out/ -o",
-      "validate": "web-ext lint -s src/",
-      "generate": "bash scripts/gen-script.sh",
-      "run": "web-ext run -s src/ -t firefox-android --adb-device ${ADB_DEVICE} --firefox-apk ${FIREFOX_APK}",
       "format": "biome format --write .",
       "lint": "biome check .",
-      "check": ["devbox run format", "devbox run lint"]
+      "check": ["devbox run format", "devbox run lint"],
+
+      "run": "web-ext run -s src/ -t firefox-android --adb-device ${ADB_DEVICE} --firefox-apk ${FIREFOX_APK}",
+      "build": "web-ext build -s src/ -a out/ -o",
+      "validate": "web-ext lint -s src/",
+
+      "generate": "bash scripts/gen-script.sh"
     }
   },
 
