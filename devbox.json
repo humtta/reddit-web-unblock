@@ -1,6 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.17.5/.schema/devbox.schema.json",
 
+  "env_from": ".env",
+
+  "shell": {
+    "scripts": {
+      "build": "web-ext build -s src/ -a out/ -o",
+      "validate": "web-ext lint -s src/",
+      "generate": "bash scripts/gen-script.sh",
+      "run": "web-ext run -s src/ -t firefox-android --adb-device $ADB_DEVICE --firefox-apk $FIREFOX_APK",
+      "format": "biome format --write .",
+      "lint": "biome check .",
+      "check": ["devbox run format", "devbox run lint"]
+    }
+  },
+
   "packages": {
     "web-ext": "8.10.0",
     "android-tools": "35.0.2",
