@@ -7,7 +7,7 @@
     "scripts": {
       "format": "biome format --write .",
       "lint": "biome check .",
-      "check": ["devbox run format", "devbox run lint"],
+      "check": "devbox run format && devbox run lint",
 
       "dev": "web-ext run -s src/ -t firefox-android --adb-device ${ADB_DEVICE} --firefox-apk ${FIREFOX_APK}",
       "build": "web-ext build -s src/ -a out/ -o",
